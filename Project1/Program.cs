@@ -52,7 +52,7 @@ namespace Project1{
                                     Console.WriteLine("Error, invalid ID!");
                             }
                             else
-                                Console.WriteLine("---- THERE ARE NOT PRODUCTS! ---");
+                                Console.WriteLine("---- THERE ARE NO PRODUCTS! ---");
                             break;
 
                         case 4:
@@ -74,7 +74,7 @@ namespace Project1{
                                     Console.WriteLine("Error, invalid ID!");
                             }
                             else
-                                Console.WriteLine("---- THERE ARE NOT PRODUCTS! ---");
+                                Console.WriteLine("---- THERE ARE NO PRODUCTS! ---");
                             break;
 
                         case 5:
