@@ -4,44 +4,31 @@ using System.Collections.Generic;
 namespace Project1{
     public class Inventory{
         public static void ListProducts(List<Product> products){
-            if (CountList(products) >= 1)
+            if (products.Count >= 1)
             {
                 Console.WriteLine("---- LIST OF PRODUCTS ---");
                 foreach (Product product in products)
                 {
-                    product.ToString();
+                    Console.WriteLine(product);
                     Console.WriteLine("***********");
                 }
                 Console.WriteLine("------------------------");
             }
             else
-                Console.WriteLine("---- THERE ARE NOT PRODUCTS! ---");
+                Console.WriteLine("---- THERE ARE NO PRODUCTS! ---");
         }
 
-        public static void AddProduct(List<Product> products, Product product)
-        {
-            products.Add(product);
-        }
-
-        public static int CountList(List<Product> products){
-            return products.Count;
-        }
-
-        public static bool FindProductById(int id, List<Product> products, out Product product, out int index){
+        public static bool FindProductById(int id, List<Product> products, out Product product, out int index) {
             product = null;
             index = -1;
-            if (id > 0){
-                try{
-                    for (int i = 0; i < products.Count; i++){
-                        if (products[i].Id == id){
-                            product = products[i];
-                            index = i;
-                            return true;
-                        }
-                    }
-                    return false;
-                }catch (Exception){
-                    return false;
+            if (id <= 0)
+                return false;
+
+            for (int i = 0; i < products.Count; i++){
+                if (products[i].Id == id){
+                    product = products[i];
+                    index = i;
+                    return true;
                 }
             }
             return false;
@@ -54,8 +41,7 @@ namespace Project1{
                     if (stock >= 0){
                         products[index].Stock = stock;
                         Console.WriteLine("Product Updated!");
-
-                        ListProducts(products);
+                        Console.WriteLine(products[index]);
                     }else
                         Console.WriteLine("Stock must be greater than or equal to 0!");
                 }else
