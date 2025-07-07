@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
 
 namespace Project1
 {
@@ -32,8 +28,8 @@ namespace Project1
             return new Product(id, name, price, stock);
         }
 
-        public void ShowInfo(){
-            Console.WriteLine($"Id: {Id} - Name: {Name} - Price: {Price} - Stock: {Stock}");
+        public override string ToString(){
+            return $"Name: {Name}\nPrice: {Price}\nStock: {Stock}";
         }
         
     }

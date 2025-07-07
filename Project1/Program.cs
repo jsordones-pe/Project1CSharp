@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
-namespace Project1
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Project1{
+    class Program{
+        static void Main(string[] args){
             bool sw = true;
             List<Product> products = new List<Product>();
             Console.WriteLine("Welcome to the inventory!");
@@ -42,7 +38,7 @@ namespace Project1
                             if(Inventory.CountList(products) >= 1){
                                 if (ValidateInt("Enter the product ID", out int id)){
                                     if (Inventory.FindProductById(id, products, out Product prod, out int index))
-                                        prod.ShowInfo();
+                                        prod.ToString();
                                     else
                                         Console.WriteLine("Product not found!");
                                 }else

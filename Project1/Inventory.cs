@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Project1{
     public class Inventory{
@@ -11,7 +9,8 @@ namespace Project1{
                 Console.WriteLine("---- LIST OF PRODUCTS ---");
                 foreach (Product product in products)
                 {
-                    Console.WriteLine($"Id: {product.Id} - Name: {product.Name} - Stock: {product.Stock} - Price: {product.Price}");
+                    product.ToString();
+                    Console.WriteLine("***********");
                 }
                 Console.WriteLine("------------------------");
             }
