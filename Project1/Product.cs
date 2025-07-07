@@ -24,7 +24,7 @@ namespace Project1
         }
 
         public override string ToString(){
-            return $"ID: {Id}\nName: {Name}\nPrice: {Price}\nStock: {Stock}";
+            return $"ID: {Id}\nName: {Name}\nPrice: {Price.ToString("C")}\nStock: {Stock}";
         }
         
     }
